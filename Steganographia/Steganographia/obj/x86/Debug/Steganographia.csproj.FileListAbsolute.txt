@@ -1,0 +1,5 @@
+\\csfs\home$\migal_a_d\Profile\Desktop\Стеганография\Steganographia\Steganographia\bin\Debug\Steganographia.exe
+\\csfs\home$\migal_a_d\Profile\Desktop\Стеганография\Steganographia\Steganographia\bin\Debug\Steganographia.pdb
+\\csfs\home$\migal_a_d\Profile\Desktop\Стеганография\Steganographia\Steganographia\obj\x86\Debug\ResolveAssemblyReference.cache
+\\csfs\home$\migal_a_d\Profile\Desktop\Стеганография\Steganographia\Steganographia\obj\x86\Debug\Steganographia.exe
+\\csfs\home$\migal_a_d\Profile\Desktop\Стеганография\Steganographia\Steganographia\obj\x86\Debug\Steganographia.pdb

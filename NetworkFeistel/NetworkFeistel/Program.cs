@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.IO;
 
 namespace NetworkFeistel
 {
@@ -116,12 +117,29 @@ namespace NetworkFeistel
         {
             const int symPerBlock = 8;
 
-            String mes = "Lights go out and I can't be saved \n";
-            
-            if (mes.Length % symPerBlock != 0)
-                mes = mes.PadRight(mes.Length + (symPerBlock - mes.Length % symPerBlock));
+            if (args.Length < 3) 
+            {
+                Console.WriteLine("Usage: [-c | -d] input-file key");
+                return;
+            }
+            if (!args[0].Equals("-c") && !args[0].Equals("-d"))
+            {
+                Console.WriteLine("Incorrect 2nd parameter");
+                return;
+            }
+            bool toEncrypt = args[0].Equals("-c") ? true : false;
+            TextReader tr = new StreamReader(args[1]);
+            UInt32 key = UInt32.Parse(args[2]);
+
+            String mes = tr.ReadToEnd();
+            tr.Close();
+
+            if (toEncrypt)
+                if (mes.Length % symPerBlock != 0)
+                    mes = mes.PadRight(mes.Length + (symPerBlock - mes.Length % symPerBlock));
             Console.WriteLine("Message : " + mes + "%");
 
+            // Fill blocks with letters
             int mesLeng = mes.Length;
             UInt32[] blocks = new UInt32[mesLeng / 4];
             for (int i = 0; i < blocks.Length; i++)
@@ -140,21 +158,22 @@ namespace NetworkFeistel
             Console.WriteLine("_______________");
             Console.WriteLine();
 
-            UInt32 key = 5687382;
             int rounds = 8;
-            UInt32[] encrypted = encrypt(blocks, key, rounds, true);
-            printBinaries(encrypted);
-            Console.WriteLine(blocksToText(encrypted));
+            UInt32[] transformed = encrypt(blocks, key, rounds, toEncrypt);
+            printBinaries(transformed);
+
+            String filename = toEncrypt ? "encryptedText.txt" : "decodedText.txt";
+            
+            String text = blocksToText(transformed);
+            TextWriter tw = new StreamWriter(
+                Directory.GetCurrentDirectory() + "/" + filename);
+            tw.WriteLine(text);
+            tw.Close();
+
+            Console.WriteLine("Result: ");
+            Console.WriteLine(text);
             Console.WriteLine("_______________");
             Console.WriteLine();
-
-            UInt32[] decrypted = encrypt(encrypted, key, rounds, false);
-            printBinaries(decrypted);
-
-            Console.WriteLine("Decoded text ");
-            Console.WriteLine("---------------------------");
-            Console.WriteLine(blocksToText(decrypted));
-            Console.ReadLine();
         }
     }
 }

@@ -1,5 +1,0 @@
-D:\University\4_course\Информ_безоп_практика\NetworkFeistel\NetworkFeistel\obj\x86\Debug\ResolveAssemblyReference.cache
-D:\University\4_course\Информ_безоп_практика\NetworkFeistel\NetworkFeistel\bin\Debug\NetworkFeistel.exe
-D:\University\4_course\Информ_безоп_практика\NetworkFeistel\NetworkFeistel\bin\Debug\NetworkFeistel.pdb
-D:\University\4_course\Информ_безоп_практика\NetworkFeistel\NetworkFeistel\obj\x86\Debug\NetworkFeistel.exe
-D:\University\4_course\Информ_безоп_практика\NetworkFeistel\NetworkFeistel\obj\x86\Debug\NetworkFeistel.pdb
