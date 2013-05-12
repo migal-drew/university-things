@@ -1,0 +1,10 @@
+D:\Programming\ProjectSunshine\ProjectSunshine\bin\Release\ProjectSunshine.exe
+D:\Programming\ProjectSunshine\ProjectSunshine\bin\Release\ProjectSunshine.pdb
+D:\Programming\ProjectSunshine\ProjectSunshine\bin\Release\Interop.WMPLib.dll
+D:\Programming\ProjectSunshine\ProjectSunshine\obj\x86\Release\ResolveAssemblyReference.cache
+D:\Programming\ProjectSunshine\ProjectSunshine\obj\x86\Release\ProjectSunshine.frmMain.resources
+D:\Programming\ProjectSunshine\ProjectSunshine\obj\x86\Release\ProjectSunshine.Properties.Resources.resources
+D:\Programming\ProjectSunshine\ProjectSunshine\obj\x86\Release\GenerateResource-ResGen.read.1.tlog
+D:\Programming\ProjectSunshine\ProjectSunshine\obj\x86\Release\GenerateResource-ResGen.write.1.tlog
+D:\Programming\ProjectSunshine\ProjectSunshine\obj\x86\Release\ProjectSunshine.exe
+D:\Programming\ProjectSunshine\ProjectSunshine\obj\x86\Release\ProjectSunshine.pdb

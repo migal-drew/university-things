@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7E836C15-A2ED-4B64-9924-327DCAD4C6AB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ProjectSunshine</RootNamespace>
+    <AssemblyName>ProjectSunshine</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Interop.WMPLib">
+      <HintPath>..\Interop.WMPLib.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Drawing\MyDrawing.cs" />
+    <Compile Include="frnMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frnMain.Designer.cs">
+      <DependentUpon>frnMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Logic\Aliens\Aircraft.cs" />
+    <Compile Include="Logic\Aliens\Alien.cs" />
+    <Compile Include="Logic\Aliens\ArmoredBomber.cs" />
+    <Compile Include="Logic\Aliens\Bomber.cs" />
+    <Compile Include="Logic\Aliens\Boss.cs" />
+    <Compile Include="Logic\Aliens\Enemies.cs" />
+    <Compile Include="Logic\Aliens\Fighter.cs" />
+    <Compile Include="Logic\Aliens\GunBoat.cs" />
+    <Compile Include="Logic\Aliens\HeavyFighter.cs" />
+    <Compile Include="Logic\Bonuses\Battery.cs" />
+    <Compile Include="Logic\Bonuses\Bonus.cs" />
+    <Compile Include="Logic\Bonuses\Cash.cs" />
+    <Compile Include="Logic\Bonuses\EnhanceWeapon.cs" />
+    <Compile Include="Logic\Bonuses\Invulnerability.cs" />
+    <Compile Include="Logic\Bonuses\Life.cs" />
+    <Compile Include="Logic\Bonuses\Spanner.cs" />
+    <Compile Include="Logic\Bullet.cs" />
+    <Compile Include="Logic\Cannon.cs" />
+    <Compile Include="Logic\Directions.cs" />
+    <Compile Include="Logic\SpacePoint.cs" />
+    <Compile Include="Logic\EnemyBullet.cs" />
+    <Compile Include="Logic\Ship.cs" />
+    <Compile Include="Logic\Space.cs" />
+    <Compile Include="Logic\SpaceObject.cs" />
+    <Compile Include="Logic\StageDirector.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sound\MySoundPlayer.cs" />
+    <EmbeddedResource Include="frnMain.resx">
+      <DependentUpon>frnMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Interface\about.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Interface\menu.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
