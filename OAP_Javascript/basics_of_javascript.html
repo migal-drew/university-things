@@ -1,0 +1,145 @@
+<body>
+<script>
+function alertMessage(mes) {
+	alert(mes);
+}
+
+function sayHi() {
+	alert("Hello from function!");
+}
+
+function workWithVariables() {
+	var admin, name;
+	name = "Василий";
+	admin = name;
+	alert(admin);
+}
+
+var declaration = function() {
+	var planet = "Земля";
+	var customer = "Петя";
+}
+
+function while_loop() {
+    var i = 0;
+    while (++i < 5) alert(i);
+    i = 0;
+    while (i++ < 5) alert(i);
+}
+
+function for_loop() {
+    for(var i=0; i<5; i++) alert(i);
+    for(var i=0; i<5; ++i) alert(i);
+}
+    
+function while_insteadof_for() {
+    var i = 0;
+    while (i < 3)
+       alert("number " + i++ + "!");
+}
+
+function prompt_100() {
+    var number = 0;
+    while (number != 100) {
+        var number = prompt("Введите число 100")
+        if (number == null)
+            return;
+    }
+}
+
+function switch_browser() {
+    var browser = 'Opera';
+    if (browser == 'IE')
+        alert('О, у вас IE');
+    else if (browser == 'Chrome' || browser == 'Firefox' || browser == 'Safari' || browser == 'Opera')
+        alert('Да, и эти браузеры мы поддерживаем');
+    else 
+        alert('Мы надеемся, что и в вашем браузере все ок!');
+}
+
+function switch_instead_of_if() {
+    var a = +prompt('a?', '');
+    switch(a) {
+        case 0:
+            alert(0);
+            break;
+        case 1:
+            alert(1);
+            break;
+        case 2:
+        case 3:
+            alert('2,3');
+            break;
+    }
+}
+    
+</script>
+<button></button>></bu>
+<button onclick="alertMessage('Я - Javascript')">Alert</button>
+<button onclick="sayHi()">Function test!</button>
+<button onclick="workWithVariables()">Say Василий</button>
+<button onclick="alert(declaration)">Объявление переменных</button>
+
+<br><p1>Циклы</p1><br>
+<button onclick="while_loop()">while</button>
+<button onclick="for_loop()">for</button>
+<button onclick="while_insteadof_for()">While instead of for</button>
+<button onclick="prompt_100()">Enter number "100"</button>
+<button onclick="switch_browser()">If..else instead of switch</button>
+<button onclick="switch_instead_of_if()">Switch instead of if</button>
+
+<br>Функции 
+<button onclick="alert(findmin(3, 2))">Find min function</button>
+<button onclick="alert(pow())">Power</button>
+
+X: <input type="text" id="x"> N: <input type="text" id="n">
+
+<script>
+function findmin(a, b) {
+    var a = document.getElementById("x");
+    var b = document.getElementById("n");
+    return (a < b) ? a : b;
+}
+function pow() {
+    var x = document.getElementById("x").value;
+    var n = document.getElementById("n").value;
+    for (var i = 1; i < n; i++)
+        x = x * x;
+    return x;
+}
+</script>
+
+<br><br> Рекурсия, стек
+<script>
+    function sum_recursion(n) {
+        if (n == 1)
+            return 1;
+        return n + sum_recursion(n - 1);
+    }
+
+    function sum() {
+        var x = +prompt("Введите число n, для которого необходимо вычислить сумму от 1 до n");
+        alert("Сумма:" + sum_recursion(x));
+    }
+
+    function sumTo(n) {
+      return n*(n+1)/2;
+    }
+
+    function fib(n) {
+        if (n == 1 || n == 2)
+            return 1;
+
+        return fib(n-1) + fib(n-2);
+    }
+</script>
+<button onclick="sum()">Sum 1..n</button>
+<button onclick="alert(sumTo(5))">Sum 1..n by formula</button>
+<button onclick="alert(fib(7))">Fibs</button>
+
+<br><br> Методы и свойства
+<button onclick="alert('Hello'.toUpperCase())">To upper case</button>
+<button onclick="alert('Hello'.toLowerCase())">To lower case</button>
+
+
+</body>
